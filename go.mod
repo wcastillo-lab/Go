@@ -1,3 +1,3 @@
-module hello.go
+module golang
 
 go 1.13
