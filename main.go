@@ -7,13 +7,13 @@ import (
 
 func main() {
 	const VERSION = "1.0"
-	myversion := flag.Bool("version",false, "show the program version")
+	theversion := flag.Bool("version",false, "show the program version")
 	flag.Parse()
-	if *myversion {
+	if *theversion {
 		fmt.Println(VERSION)
 		return
 	}
-	fmt.Println("Hello World")
+	fmt.Println("Hello, World")
 	
 }
   
