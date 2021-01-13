@@ -9,8 +9,8 @@ import (
 func main() {
 
 	type User struct {
-		Login    string
-		Password string
+		Login    string `json:"Username"`
+		Password string 
 	}
 	u := User{
 		Login:     "Paul",
@@ -23,3 +23,4 @@ func main() {
 	fmt.Println(string(b))
 
 }
+
