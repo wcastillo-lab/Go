@@ -32,7 +32,10 @@ type List struct {
 
 var task []Task {}
 func list(rw http.ResponseWriter, _ *http.Request){
-	
+	list := []List{}
+	task = []Task{
+		{"wi", false},
+		{"su"}
 }	
 
 
