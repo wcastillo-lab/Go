@@ -8,15 +8,21 @@ import (
 
 func main() {
 	
-	task := []string{}
+	var tark []Task
 
 
-	h1 := func(w http.ResponseWriter, _ *http.Request) {
+	func list(rw http.ResponseWriter, _ *http.Request) {
 		io.WriteString(w, "Hello from a HandleFunc #1!\n")
 	}
-	h2 := func(w http.ResponseWriter, _ *http.Request) {
+	
+	func done(rw http.ResponseWriter, _ *http.Request) {
 		io.WriteString(w, "Hello from a HandleFunc #2!\n")
 	}
+
+	func add(rw http.ResponseWriter, _ *http.Request) {
+                io.WriteString(w, "Hello from a HandleFunc #3!\n")
+        }
+
 
 	http.HandleFunc("/", list)
 	http.HandleFunc("/done", done)
